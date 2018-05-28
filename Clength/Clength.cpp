@@ -54,11 +54,11 @@ public:
 	{
 		cout << feet << " Feet " << inch << " Inch " << endl;
 	}
-	CLength operator + (CLength temp)
+	CLength operator + (int i)
 	{
 		CLength f;
-		f.inFoot(feet + temp.feet);
-		f.inInch(inch + temp.inch);
+		f.inFoot(feet);
+		f.inInch(inch + i);
 		return f;
 	}
 };
@@ -74,9 +74,7 @@ int main()
 	test.display();
 	//test.AddLength(9, 10);
 	//test.display();
-	a.inFoot(9);
-	a.inInch(10);
-	c = test + a;
+	c = test + 13;
 	c.display();
 	return 0;
 }
